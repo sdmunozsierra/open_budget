@@ -65,14 +65,11 @@ void main(){
   });
 
   test('test income tax', (){
-    IncomeTax incomeTax = new IncomeTax();
-    incomeTax.calculateStateTaxRate("VA");
+    VirginiaStateTax testVirginiaStateTax = new VirginiaStateTax();
 
     // My bracket 80k
-    expect(incomeTax.calculateEffectiveTax(67600), 10775);
+    expect(testVirginiaStateTax.calculateGenericTax(3000), 60);
 
-    // Others
-    expect(incomeTax.calculateEffectiveTax(41049), 4890);
   });
 
 }
